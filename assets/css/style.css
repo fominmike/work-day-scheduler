@@ -36,7 +36,15 @@ textarea{
   border-top: 1px solid white;;
 }
 
-.hour {
+time.hour9,
+time.hour10,
+time.hour11,
+time.hour12,
+time.hour13,
+time.hour14,
+time.hour15,
+time.hour16,
+time.hour17 {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
