@@ -83,3 +83,20 @@ time.hour17 {
   width: 100%;
 }
 
+.clrBtn:hover {
+  cursor: pointer;
+  background-color: #06AED5;
+  color: white;
+}
+
+.clrBtn {
+  padding: 20px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.col-8 {
+  text-align: center;
+  color: black;
+  font-size: 1.2rem;
+}

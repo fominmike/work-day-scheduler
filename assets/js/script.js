@@ -25,6 +25,22 @@ var textArea6 = document.getElementById('tx6')
 var textArea7 = document.getElementById('tx7')
 var textArea8 = document.getElementById('tx8')
 var textArea9 = document.getElementById('tx9')
+
+
+// buttons
+var btn1 = document.getElementById('btn1')
+var btn2 = document.getElementById('btn2')
+var btn3 = document.getElementById('btn3')
+var btn4 = document.getElementById('btn4')
+var btn5 = document.getElementById('btn5')
+var btn6 = document.getElementById('btn6')
+var btn7 = document.getElementById('btn7')
+var btn8 = document.getElementById('btn8')
+var btn9 = document.getElementById('btn9')
+
+var clearButton = document.querySelector('.clrBtn')
+
+
  
 function setColor1() {
     if(hour9 < currentHour) {
@@ -116,6 +132,89 @@ function setColor9() {
     }
 }
 
+function saveInfo1(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info1', textArea1.value)
+}
+
+function saveInfo2(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info2', textArea2.value)
+}
+
+function saveInfo3(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info3', textArea3.value)
+}
+
+function saveInfo4(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info4', textArea4.value)
+}
+
+function saveInfo5(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info5', textArea5.value)
+}
+
+function saveInfo6(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info6', textArea6.value)
+}
+
+function saveInfo7(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info7', textArea7.value)
+}
+
+function saveInfo8(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info8', textArea8.value)
+}
+
+function saveInfo9(e) {
+    e.preventDefault()
+
+    localStorage.setItem('info9', textArea9.value)
+}
+
+
+
+function returnSaved() {
+    var info1 = localStorage.getItem('info1')
+    var info2 = localStorage.getItem('info2')
+    var info3 = localStorage.getItem('info3')
+    var info4 = localStorage.getItem('info4')
+    var info5 = localStorage.getItem('info5')
+    var info6 = localStorage.getItem('info6')
+    var info7 = localStorage.getItem('info7')
+    var info8 = localStorage.getItem('info8')
+    var info9 = localStorage.getItem('info9')
+
+
+    textArea1.textContent = info1
+    textArea2.textContent = info2
+    textArea3.textContent = info3
+    textArea4.textContent = info4
+    textArea5.textContent = info5
+    textArea6.textContent = info6
+    textArea7.textContent = info7
+    textArea8.textContent = info8
+    textArea9.textContent = info9
+}
+
+returnSaved()
+
+
+
 
 setColor1()
 setColor2()
@@ -126,3 +225,31 @@ setColor6()
 setColor7()
 setColor8()
 setColor9()
+
+
+// events
+
+btn1.addEventListener('click', saveInfo1)
+btn2.addEventListener('click', saveInfo2)
+btn3.addEventListener('click', saveInfo3)
+btn4.addEventListener('click', saveInfo4)
+btn5.addEventListener('click', saveInfo5)
+btn6.addEventListener('click', saveInfo6)
+btn7.addEventListener('click', saveInfo7)
+btn8.addEventListener('click', saveInfo8)
+btn9.addEventListener('click', saveInfo9)
+
+
+clearButton.addEventListener('click', function() {
+    localStorage.clear()
+
+    textArea1.textContent = ''
+    textArea2.textContent = ''
+    textArea3.textContent = ''
+    textArea4.textContent = ''
+    textArea5.textContent = ''
+    textArea6.textContent = ''
+    textArea7.textContent = ''
+    textArea8.textContent = ''
+    textArea9.textContent = ''
+})
