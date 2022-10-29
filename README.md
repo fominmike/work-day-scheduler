@@ -3,6 +3,8 @@
 ## Description
 This is a Work Day Scheduler which helps user input content into the box and save it so they could use it to remind themselves on what they have to do.
 
+This was also great practice for me to work more on javaScript. 
+
 ## Usage
 1. Open a browser (Chrome, Safari, etc.)
 
